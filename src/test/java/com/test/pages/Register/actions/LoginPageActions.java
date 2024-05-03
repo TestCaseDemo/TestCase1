@@ -248,9 +248,7 @@ public class LoginPageActions {
     public void clickOnContinue(){
         try{
 
-            login_page_locators.continueButton.click();
-            driver.navigate().refresh();
-            Thread.sleep(1000);
+
             login_page_locators.continueButton.click();
             Thread.sleep(2000);
 
