@@ -229,6 +229,7 @@ public class LoginPageActions {
     }
     public void verifyAccountCreatedMessage(){
         try{
+
             String actualMessage = login_page_locators.accountCreatedMessage.getText();
             String expectedMessage = Constants.AccountCreatedMessage;
             if(actualMessage.contains(expectedMessage)){
@@ -240,20 +241,27 @@ public class LoginPageActions {
                 System.out.println("Incorrect Account Created msg. Expected : " + expectedMessage);
             }
             softAssert.assertAll();
-        }catch (TimeoutException e){
+        }catch (TimeoutException  e){
             System.out.println("TimeOut Error " + e.getMessage());
         }
     }
     public void clickOnContinue(){
         try{
+
             login_page_locators.continueButton.click();
-        }catch (TimeoutException e){
+            driver.navigate().refresh();
+            Thread.sleep(1000);
+            login_page_locators.continueButton.click();
+            Thread.sleep(2000);
+
+        }catch (TimeoutException | InterruptedException e){
             System.out.println("TimeOut Error " + e.getMessage());
         }
     }
 
-    public void verifyUserNameMatchWithNameAccountInfo(){
+    public void verifyUserNameMatchWithNameAccountInfo()  {
         try{
+
             String actualUserName = login_page_locators.userName.getText();
             String expectedUsername = Constants.NameAccountInfo;
             if(actualUserName.contains(expectedUsername)){

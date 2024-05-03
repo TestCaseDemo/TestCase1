@@ -5,7 +5,7 @@ public interface Constants {
 String urls = "https://automationexercise.com";
 String NewUserSignUpFormTitle ="New User Signup!";
 String NewSignUpName = "Fah05";
-String NewSignUpEmailAddress = "abc05@gmail.com";
+String NewSignUpEmailAddress = "abc273@gmail.com";
 String AccountInfoFormTitle = "ENTER ACCOUNT INFORMATION";
 String TitleMr = "Mr.";
 String TitleMrs ="Mrs.";
